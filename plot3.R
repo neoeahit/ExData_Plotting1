@@ -1,0 +1,7 @@
+data=read_data()
+png("plot3.png", height=480, width=480)
+with(data, plot(Time, Sub_metering_1, type="l",ylab="Energy sub metering", xlab=" ", col="black"))
+with(data, lines(Time, Sub_metering_2, col="red"))
+with(data, lines(Time, Sub_metering_3, col="blue"))
+legend(x="topright", lwd=1, legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black", "red", "blue"))
+dev.off()
